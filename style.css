@@ -13,6 +13,9 @@ body {
   background-image: url("/images/bg-header-desktop.png");
   background-repeat: no-repeat;
   background-size: 100% 400px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 .logo {
@@ -26,6 +29,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 50rem;
 }
 
 .title {
@@ -36,7 +40,7 @@ body {
 
 .header-description {
   font-size: 1.5rem;
-  padding: 1rem 30rem;
+  /* padding: 1rem 30rem; */
   font-weight: lighter;
   color: hsl(201, 11%, 66%);
 }
@@ -74,6 +78,7 @@ body {
 .services {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .services-description {
@@ -116,6 +121,7 @@ body {
   justify-content: center;
   align-self: center;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .advantage-section {
@@ -126,6 +132,7 @@ body {
   flex: 1;
   max-width: 350px;
   margin: 2rem;
+  flex-wrap: wrap;
 }
 
 .icon {
@@ -145,6 +152,7 @@ body {
   align-items: center;
   flex-direction: row;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .sponsor {
@@ -196,4 +204,35 @@ a {
 
 .social {
   flex: 1;
+}
+
+@media only screen and (max-width: 468px) {
+  .ios,
+  .mac {
+    margin: 1rem 0rem;
+  }
+  .header,
+  .services,
+  .tablet,
+  .advantages,
+  .sponsors-logo {
+    flex-wrap: wrap;
+  }
+  .title {
+    margin: 2rem;
+  }
+  .desktopscreen,
+  .img-devices {
+    width: 100%;
+    padding: 1rem;
+  }
+  .advantages {
+    flex-direction: column;
+  }
+  .advantage-title {
+    font-size: 2rem;
+  }
+  .advantage-description {
+    font-size: 1.5rem;
+  }
 }
